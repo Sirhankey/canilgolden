@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kennel Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="assets/logo.jpg" alt="Kennel Logo" class="logo" />
+            <nav>
+                <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+                <ul class="menu">
+                  <li><a href="#about">About Us</a></li>
+                  <li><a href="#gallery">Gallery</a></li>
+                  <li><a href="#feedback">Feedback</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+              </nav>
+              
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section"></section>
+        <section id="gallery" class="section"></section>
+        <section id="feedback" class="section"></section>
+        <section id="contact" class="section"></section>
+    </main>
+
+    <footer>
+        <div class="container" id="footer"></div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const script = document.createElement("script");
+            script.src = "script.js";
+            document.body.appendChild(script);
+        });
+    </script>
+</body>
+
+</html>

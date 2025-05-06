@@ -1,0 +1,51 @@
+{
+    "logo": "https://picsum.photos/200/80?random=10",
+    "about": {
+      "mainImage": "https://picsum.photos/1200/500?random=11",
+      "sections": [
+        {
+          "title": "Our Story",
+          "text": "We are a family-owned kennel...",
+          "image": "https://picsum.photos/600/400?random=12"
+        },
+        {
+          "title": "Our Philosophy",
+          "text": "We believe in love, care, and proper training...",
+          "image": "https://picsum.photos/600/400?random=13"
+        }
+      ]
+    },
+    "gallery": [
+      {
+        "image": "https://picsum.photos/600/400?random=1",
+        "text": "Golden Retriever puppy enjoying the sun."
+      },
+      {
+        "image": "https://picsum.photos/600/400?random=2",
+        "text": "First steps in the garden."
+      },
+      {
+        "image": "https://picsum.photos/600/400?random=3",
+        "text": "Snuggle time with siblings."
+      }
+    ],
+    "feedbacks": [
+      {
+        "name": "Emma L.",
+        "text": "Our Golden is perfect! Thank you for your love and care.",
+        "photo": "https://picsum.photos/100?random=4"
+      },
+      {
+        "name": "Carlos M.",
+        "text": "A healthy and playful puppy. Highly recommend this kennel!",
+        "photo": "https://picsum.photos/100?random=5"
+      }
+    ],
+    "contact": {
+      "email": "contact@canilgalega.pt",
+      "whatsapp": "+351912345678",
+      "instagram": "https://instagram.com/canilgalega",
+      "facebook": "https://facebook.com/canilgalega"
+    }
+  }
+  
