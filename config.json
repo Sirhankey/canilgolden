@@ -1,51 +1,172 @@
 {
     "logo": "https://picsum.photos/200/80?random=10",
     "about": {
-      "mainImage": "https://picsum.photos/1200/500?random=11",
-      "sections": [
-        {
-          "title": "Our Story",
-          "text": "We are a family-owned kennel...",
-          "image": "https://picsum.photos/600/400?random=12"
-        },
-        {
-          "title": "Our Philosophy",
-          "text": "We believe in love, care, and proper training...",
-          "image": "https://picsum.photos/600/400?random=13"
-        }
-      ]
+        "mainImage": "https://picsum.photos/1200/500?random=11",
+        "sections": [
+            {
+                "title": "Our Story",
+                "text": "We are a family-owned kennel...",
+                "image": "https://picsum.photos/600/400?random=12"
+            },
+            {
+                "title": "Our Philosophy",
+                "text": "We believe in love, care, and proper training...",
+                "image": "https://picsum.photos/600/400?random=13"
+            }
+        ]
     },
     "gallery": [
-      {
-        "image": "https://picsum.photos/600/400?random=1",
-        "text": "Golden Retriever puppy enjoying the sun."
-      },
-      {
-        "image": "https://picsum.photos/600/400?random=2",
-        "text": "First steps in the garden."
-      },
-      {
-        "image": "https://picsum.photos/600/400?random=3",
-        "text": "Snuggle time with siblings."
-      }
+        {
+            "image": "https://picsum.photos/800/500?random=1",
+            "text": "A joyful Golden exploring the fields."
+        },
+        {
+            "image": "https://picsum.photos/800/500?random=2",
+            "text": "Our pup’s first encounter with butterflies."
+        },
+        {
+            "image": "https://picsum.photos/800/500?random=3",
+            "text": "Cozy nap time under the tree."
+        },
+        {
+            "image": "https://picsum.photos/800/500?random=4",
+            "text": "Morning stretches and golden sunshine."
+        },
+        {
+            "image": "https://picsum.photos/800/500?random=5",
+            "text": "Ready for a splash in the river."
+        },
+        {
+            "image": "https://picsum.photos/800/500?random=6",
+            "text": "Afternoon cuddles with siblings."
+        },
+        {
+            "image": "https://picsum.photos/800/500?random=7",
+            "text": "Garden adventures in spring."
+        },
+        {
+            "image": "https://picsum.photos/800/500?random=8",
+            "text": "Treat time! Look at that smile."
+        },
+        {
+            "image": "https://picsum.photos/800/500?random=9",
+            "text": "Paws in the sand, heart in the wind."
+        },
+        {
+            "image": "https://picsum.photos/800/500?random=14",
+            "text": "Sunset walks with our Goldens."
+        },
+        {
+            "image": "https://picsum.photos/800/500?random=15",
+            "text": "Learning to sit like a pro."
+        },
+        {
+            "image": "https://picsum.photos/800/500?random=16",
+            "text": "Belly rub break during play."
+        },
+        {
+            "image": "https://picsum.photos/800/500?random=17",
+            "text": "Golden eyes full of curiosity."
+        },
+        {
+            "image": "https://picsum.photos/800/500?random=18",
+            "text": "Waiting patiently for their new home."
+        },
+        {
+            "image": "https://picsum.photos/800/500?random=19",
+            "text": "Playdate with new friends."
+        },
+        {
+            "image": "https://picsum.photos/800/500?random=20",
+            "text": "Peek-a-boo from the bushes."
+        },
+        {
+            "image": "https://picsum.photos/800/500?random=21",
+            "text": "Gentle kisses from a gentle pup."
+        },
+        {
+            "image": "https://picsum.photos/800/500?random=22",
+            "text": "Puppy eyes that melt your heart."
+        },
+        {
+            "image": "https://picsum.photos/800/500?random=23",
+            "text": "Exploring every leaf and twig."
+        },
+        {
+            "image": "https://picsum.photos/800/500?random=24",
+            "text": "Best friends posing for a photo."
+        }
     ],
     "feedbacks": [
-      {
-        "name": "Emma L.",
-        "text": "Our Golden is perfect! Thank you for your love and care.",
-        "photo": "https://picsum.photos/100?random=4"
-      },
-      {
-        "name": "Carlos M.",
-        "text": "A healthy and playful puppy. Highly recommend this kennel!",
-        "photo": "https://picsum.photos/100?random=5"
-      }
+        {
+            "name": "Emma L.",
+            "text": "Our Golden is perfect! Thank you for your love and care.",
+            "photos": [
+                "https://picsum.photos/600/400?random=101",
+                "https://picsum.photos/600/400?random=102",
+                "https://picsum.photos/600/400?random=103"
+            ]
+        },
+        {
+            "name": "Carlos M.",
+            "text": "A healthy and playful puppy. Highly recommend this kennel!",
+            "photos": [
+                "https://picsum.photos/600/400?random=104",
+                "https://picsum.photos/600/400?random=105"
+            ]
+        },
+        {
+            "name": "Sofia D.",
+            "text": "We were impressed with the care and dedication. Our puppy is thriving!",
+            "photos": [
+                "https://picsum.photos/600/400?random=106",
+                "https://picsum.photos/600/400?random=107",
+                "https://picsum.photos/600/400?random=108"
+            ]
+        },
+        {
+            "name": "Rui A.",
+            "text": "Great experience from start to finish. The team was super attentive!",
+            "photos": [
+                "https://picsum.photos/600/400?random=109",
+                "https://picsum.photos/600/400?random=110"
+            ]
+        },
+        {
+            "name": "Isabela V.",
+            "text": "Professional and friendly. We got updates and pictures every week. Amazing!",
+            "photos": [
+                "https://picsum.photos/600/400?random=111",
+                "https://picsum.photos/600/400?random=112",
+                "https://picsum.photos/600/400?random=113",
+                "https://picsum.photos/600/400?random=114",
+                "https://picsum.photos/600/400?random=115"
+            ]
+        }
     ],
     "contact": {
-      "email": "contact@canilgalega.pt",
-      "whatsapp": "+351912345678",
-      "instagram": "https://instagram.com/canilgalega",
-      "facebook": "https://facebook.com/canilgalega"
+        "email": "contact@canilgalega.pt",
+        "whatsapp": "+351912345678",
+        "instagram": "https://instagram.com/canilgalega",
+        "facebook": "https://facebook.com/canilgalega",
+        "address": "Rua dos Cães Felizes, 123 - Lisboa, Portugal",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?...sua URL aqui..."
+    },
+    "footer": {
+        "text": "© 2023 Canil Galega. Todos os direitos reservados.",
+        "socialMedia": [
+            {
+                "platform": "Instagram",
+                "url": "https://instagram.com/canilgalega"
+            },
+            {
+                "platform": "Facebook",
+                "url": "https://facebook.com/canilgalega"
+            },
+            {
+                "platform": "Twitter",
+                "url": "https://twitter.com/canilgalega"
+            }
+        ]
     }
-  }
-  
+}

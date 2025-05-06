@@ -2,50 +2,100 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kennel Website</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canil Galega</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-papNM8f5Q5z5FY1o9fZK0Ew+y8FkH3F23wTCYxYvEh+9Ri8lKZK36dXVfH9QkU8yDFZ0I8i4tIzs2zU5kD2zHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
         <div class="container">
-            <img src="assets/logo.jpg" alt="Kennel Logo" class="logo" />
+            <img id="logo" class="logo" alt="Kennel Logo">
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
             <nav>
-                <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
                 <ul class="menu">
-                  <li><a href="#about">About Us</a></li>
-                  <li><a href="#gallery">Gallery</a></li>
-                  <li><a href="#feedback">Feedback</a></li>
-                  <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-              </nav>
-              
+            </nav>
         </div>
     </header>
 
     <main>
-        <section id="about" class="section"></section>
-        <section id="gallery" class="section"></section>
-        <section id="feedback" class="section"></section>
-        <section id="contact" class="section"></section>
-    </main>
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <img id="about-main-image" class="about-main-img" alt="Main about image">
+            <div id="about-section-container"></div>
+        </section>
 
-    <footer>
-        <div class="container" id="footer"></div>
-    </footer>
+        <section id="gallery" class="section">
+            <h2>Gallery</h2>
+            <div class="gallery-preview">
+                <img id="gallery-main-image" src="" alt="Selected gallery image">
+                <div id="gallery-main-text" class="overlay-text"></div>
+            </div>
+            <div class="gallery-thumbnails" id="gallery-thumbnails"></div>
+        </section>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const script = document.createElement("script");
-            script.src = "script.js";
-            document.body.appendChild(script);
-        });
-    </script>
+        <section id="feedback" class="section">
+            <h2>Feedback</h2>
+            <div id="feedback-container"></div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contact</h2>
+            <p id="contact-highlight" class="contact-highlight"></p>
+
+            <div class="contact-card">
+                <a id="contact-instagram" class="contact-item" href="#" target="_blank" aria-label="Instagram"
+                    title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a id="contact-facebook" class="contact-item" href="#" target="_blank" aria-label="Facebook"
+                    title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a id="contact-whatsapp" class="contact-item" href="#" target="_blank" aria-label="WhatsApp"
+                    title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a id="contact-email" class="contact-item" href="#" target="_blank" aria-label="Email" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+
+            <div class="contact-map-address" id="contact-address"></div>
+
+            <div class="map-container">
+                <iframe id="contact-map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.5256457288166!2d-9.1393371!3d38.7222526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19331f1f387e39%3A0xc49d7b1d4e276c95!2sLisboa%2C%20Portugal!5e0!3m2!1sen!2spt!4v1700000000000!5m2!1sen!2spt"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+
+        <footer id="footer" class="footer">
+            <div class="footer-text" id="footer-text">© 2023 Canil Galega. Todos os direitos reservados.</div>
+            <div class="footer-icons" id="footer-icons">
+                <a href="#" target="_blank" aria-label="Instagram" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" target="_blank" aria-label="Facebook" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" target="_blank" aria-label="Twitter" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
 </body>
 
 </html>
