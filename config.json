@@ -1,146 +1,133 @@
 {
-    "logo": "https://picsum.photos/200/80?random=10",
+    "logo": "assets/logo/logo.png",
     "about": {
-        "mainImage": "https://picsum.photos/1200/500?random=11",
+        "mainImage": "assets/about/main.jpg",
         "sections": [
             {
                 "title": "Our Story",
-                "text": "We are a family-owned kennel...",
-                "image": "https://picsum.photos/600/400?random=12"
+                "text": "Canil Galega began with a simple dream: to share the joy and loyalty of Golden Retrievers with families across Portugal. As a family-owned kennel, our roots are grounded in love, responsibility, and a deep respect for animal welfare. What started as a small passion project quickly grew into a trusted name, known for raising healthy, social, and affectionate puppies. Each pup is born and raised in a nurturing home environment, surrounded by children, adults, and other pets to ensure early socialization and emotional balance. Our story is one of dedication, growth, and a whole lot of tail-wagging happiness.",
+                "image": "assets/about/story.jpg"
             },
             {
                 "title": "Our Philosophy",
-                "text": "We believe in love, care, and proper training...",
-                "image": "https://picsum.photos/600/400?random=13"
+                "text": "We believe that every puppy deserves more than just a home — they deserve a beginning filled with affection, guidance, and respect. Our philosophy combines ethical breeding practices, positive reinforcement, and early-stage socialization to nurture the best in every dog. We do not mass-produce; we raise with purpose. Every decision, from diet to veterinary care, is made with the puppy’s long-term health and happiness in mind. We see our role not just as breeders, but as caretakers of future companions — and we treat each one as part of our extended family.",
+                "image": "assets/about/philosophy.jpg"
             }
         ]
     },
     "gallery": [
         {
-            "image": "https://picsum.photos/800/500?random=1",
-            "text": "A joyful Golden exploring the fields."
+            "image": "assets/gallery/01.jpg",
+            "text": "Golden puppy enjoying the afternoon sun"
         },
         {
-            "image": "https://picsum.photos/800/500?random=2",
-            "text": "Our pup’s first encounter with butterflies."
+            "image": "assets/gallery/02.jpg",
+            "text": "First walk in the garden - full of curiosity"
         },
         {
-            "image": "https://picsum.photos/800/500?random=3",
-            "text": "Cozy nap time under the tree."
+            "image": "assets/gallery/03.jpg",
+            "text": "Siblings cuddled together after playtime"
         },
         {
-            "image": "https://picsum.photos/800/500?random=4",
-            "text": "Morning stretches and golden sunshine."
+            "image": "assets/gallery/04.jpg",
+            "text": "Exploring new scents in the backyard"
         },
         {
-            "image": "https://picsum.photos/800/500?random=5",
-            "text": "Ready for a splash in the river."
+            "image": "assets/gallery/05.jpg",
+            "text": "Golden retriever puppy sitting for a treat"
         },
         {
-            "image": "https://picsum.photos/800/500?random=6",
-            "text": "Afternoon cuddles with siblings."
+            "image": "assets/gallery/06.jpg",
+            "text": "Happy tail wags and muddy paws"
         },
         {
-            "image": "https://picsum.photos/800/500?random=7",
-            "text": "Garden adventures in spring."
+            "image": "assets/gallery/07.jpg",
+            "text": "Morning sunshine through golden fur"
         },
         {
-            "image": "https://picsum.photos/800/500?random=8",
-            "text": "Treat time! Look at that smile."
+            "image": "assets/gallery/08.jpg",
+            "text": "Sleepy pup dreaming after training"
         },
         {
-            "image": "https://picsum.photos/800/500?random=9",
-            "text": "Paws in the sand, heart in the wind."
+            "image": "assets/gallery/09.jpg",
+            "text": "A loyal look that melts your heart"
         },
         {
-            "image": "https://picsum.photos/800/500?random=14",
-            "text": "Sunset walks with our Goldens."
+            "image": "assets/gallery/10.jpg",
+            "text": "Golden pup with favorite stuffed toy"
         },
         {
-            "image": "https://picsum.photos/800/500?random=15",
-            "text": "Learning to sit like a pro."
+            "image": "assets/gallery/11.jpg",
+            "text": "Learning how to fetch for the first time"
         },
         {
-            "image": "https://picsum.photos/800/500?random=16",
-            "text": "Belly rub break during play."
+            "image": "assets/gallery/12.jpg",
+            "text": "Golden retriever in a flower field"
         },
         {
-            "image": "https://picsum.photos/800/500?random=17",
-            "text": "Golden eyes full of curiosity."
+            "image": "assets/gallery/13.jpg",
+            "text": "Puppy's first snow experience"
         },
         {
-            "image": "https://picsum.photos/800/500?random=18",
-            "text": "Waiting patiently for their new home."
+            "image": "assets/gallery/14.jpg",
+            "text": "Belly rubs and soft puppy eyes"
         },
         {
-            "image": "https://picsum.photos/800/500?random=19",
-            "text": "Playdate with new friends."
-        },
-        {
-            "image": "https://picsum.photos/800/500?random=20",
-            "text": "Peek-a-boo from the bushes."
-        },
-        {
-            "image": "https://picsum.photos/800/500?random=21",
-            "text": "Gentle kisses from a gentle pup."
-        },
-        {
-            "image": "https://picsum.photos/800/500?random=22",
-            "text": "Puppy eyes that melt your heart."
-        },
-        {
-            "image": "https://picsum.photos/800/500?random=23",
-            "text": "Exploring every leaf and twig."
-        },
-        {
-            "image": "https://picsum.photos/800/500?random=24",
-            "text": "Best friends posing for a photo."
+            "image": "assets/gallery/15.jpg",
+            "text": "Chasing butterflies on a spring day"
         }
     ],
     "feedbacks": [
         {
-            "name": "Emma L.",
-            "text": "Our Golden is perfect! Thank you for your love and care.",
+            "name": "Maria Silva",
+            "text": "We had an incredible experience with Canil Galega. From the very first conversation, the team was transparent, warm, and extremely helpful. They provided us with weekly updates, photos, and tips to help us prepare for our puppy’s arrival. Our Golden Retriever is not only healthy but exceptionally well-socialized. You can tell he came from a place filled with love and care. We couldn’t be happier!",
             "photos": [
-                "https://picsum.photos/600/400?random=101",
-                "https://picsum.photos/600/400?random=102",
-                "https://picsum.photos/600/400?random=103"
+                "assets/feedback/01/01.jpg",
+                "assets/feedback/01/02.jpg",
+                "assets/feedback/01/03.jpg"
             ]
         },
         {
-            "name": "Carlos M.",
-            "text": "A healthy and playful puppy. Highly recommend this kennel!",
+            "name": "Roberto Costa",
+            "text": "Canil Galega is a top-notch kennel! The staff is knowledgeable and genuinely cares about the dogs. They took the time to answer all my questions and made sure I was ready for my new puppy. The facilities are clean, spacious, and well-maintained. I highly recommend them to anyone looking for a responsible breeder.",
             "photos": [
-                "https://picsum.photos/600/400?random=104",
-                "https://picsum.photos/600/400?random=105"
+                "assets/feedback/02/01.jpg",
+                "assets/feedback/02/02.jpg",
+                "assets/feedback/02/03.jpg"
             ]
         },
         {
-            "name": "Sofia D.",
-            "text": "We were impressed with the care and dedication. Our puppy is thriving!",
+            "name": "Marta Pereira",
+            "text": "I was impressed by the level of care and attention my puppy received at Canil Galega. The team is passionate about their work, and it shows. They provided me with all the necessary information and support to ensure a smooth transition for my puppy into our home. I can’t thank them enough for their dedication and love for these beautiful dogs.",
             "photos": [
-                "https://picsum.photos/600/400?random=106",
-                "https://picsum.photos/600/400?random=107",
-                "https://picsum.photos/600/400?random=108"
+                "assets/feedback/03/01.jpg",
+                "assets/feedback/03/02.jpg"
             ]
         },
         {
-            "name": "Rui A.",
-            "text": "Great experience from start to finish. The team was super attentive!",
+            "name": "Carlos Mendes",
+            "text": "I adopted my Golden Retriever from Canil Galega, and I couldn’t be happier. The team was incredibly supportive throughout the entire process. They provided me with all the information I needed to care for my new puppy. The love and care they put into their dogs is evident. I highly recommend Canil Galega to anyone looking for a new furry friend.",
             "photos": [
-                "https://picsum.photos/600/400?random=109",
-                "https://picsum.photos/600/400?random=110"
+                "assets/feedback/04/01.jpg",
+                "assets/feedback/04/02.jpg",
+                "assets/feedback/04/03.jpg"
             ]
         },
         {
-            "name": "Isabela V.",
-            "text": "Professional and friendly. We got updates and pictures every week. Amazing!",
+            "name": "Ana Santos",
+            "text": "Canil Galega is a fantastic place to adopt a puppy. The staff is friendly, knowledgeable, and truly cares about the dogs. They provided me with all the information I needed to prepare for my new puppy. The facilities are clean and well-maintained. I highly recommend them to anyone looking for a responsible breeder.",
             "photos": [
-                "https://picsum.photos/600/400?random=111",
-                "https://picsum.photos/600/400?random=112",
-                "https://picsum.photos/600/400?random=113",
-                "https://picsum.photos/600/400?random=114",
-                "https://picsum.photos/600/400?random=115"
+                "assets/feedback/05/01.jpg",
+                "assets/feedback/05/02.jpg"
+            ]
+        },
+        {
+            "name": "João Almeida",
+            "text": "I had a wonderful experience with Canil Galega. The team was incredibly supportive and provided me with all the information I needed to care for my new puppy. The love and care they put into their dogs is evident. I highly recommend Canil Galega to anyone looking for a new furry friend.",
+            "photos": [
+                "assets/feedback/06/01.jpg",
+                "assets/feedback/06/02.jpg",
+                "assets/feedback/06/03.jpg"
             ]
         }
     ],
@@ -153,7 +140,7 @@
         "mapEmbedUrl": "https://www.google.com/maps/embed?...sua URL aqui..."
     },
     "footer": {
-        "text": "© 2023 Canil Galega. Todos os direitos reservados.",
+        "text": "\u00a9 2025 Canil Galega. Todos os direitos reservados.",
         "socialMedia": [
             {
                 "platform": "Instagram",

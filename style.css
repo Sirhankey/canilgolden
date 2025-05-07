@@ -36,7 +36,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
   .logo {
@@ -50,26 +52,51 @@
     border: none;
     color: white;
     cursor: pointer;
+    transition: transform 0.3s ease;
   }
   
-  nav .menu {
-    list-style: none;
+  .menu-toggle.open {
+    transform: rotate(90deg);
+  }
+  
+  nav {
+    flex-grow: 1;
     display: flex;
-    gap: 1.5rem;
+    justify-content: center;
   }
-  
+
   nav .menu li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
   }
   
-  nav .menu.active {
-    display: flex;
-    flex-direction: column;
+  nav .menu li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: white;
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
+  }
+  
+  nav .menu li a:hover {
+    color: #fff;
+  }
+  
+  nav .menu li a:hover::after {
     width: 100%;
-    background: var(--color-primary);
-    margin-top: 1rem;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
   }
   
   .section {
@@ -99,10 +126,28 @@
   }
   
   .about-sub-img {
-    width: 300px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 500px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  }
+
+  .about-text {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .about-text h2 {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  
+  .about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
   }
 
 /* GALLERY PREVIEW STYLES */
@@ -352,27 +397,74 @@
     background: #000;
     transform: scale(1.1);
   }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
   
   /* Responsivo */
   @media (max-width: 768px) {
+    .container {
+      flex-wrap: nowrap;
+    }
+  
     .menu-toggle {
       display: block;
     }
   
-    nav .menu {
-      display: none;
-      flex-direction: column;
+    nav {
+      position: absolute;
+      top: 115%;
+      left: 0;
       width: 100%;
-      padding: 1rem 0;
+    }
+  
+    nav .menu {
+      flex-direction: column;
+      background-color: var(--color-primary);
+      width: 100%;
+      padding: 1rem;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
     }
   
     nav .menu.active {
-      display: flex;
+      max-height: 300px;
+      opacity: 1;
+      pointer-events: auto;
     }
   
     .about-subsection {
-      flex-direction: column;
-      text-align: center;
+      display: flex;
+      gap: 2rem;
+      margin: 4rem 0;
+      flex-wrap: wrap;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .about-subsection.fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .about-subsection.left {
+      flex-direction: row;
+    }
+    
+    .about-subsection.right {
+      flex-direction: row-reverse;
     }
   
     .gallery {
@@ -382,5 +474,32 @@
     .feedback-carousel {
       width: 100%;
     }
+  }
+
+  @media (min-width: 768px) {
+    .menu-toggle {
+      display: none;
+    }
+  
+    nav .menu {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background: transparent;
+      padding: 0;
+      box-shadow: none;
+      opacity: 1 !important;
+      max-height: none !important;
+    }
+  }
+  
+  .section {
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 

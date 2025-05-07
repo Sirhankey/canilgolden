@@ -23,9 +23,11 @@ function setAbout(about) {
   if (mainImg) mainImg.src = about.mainImage;
 
   if (Array.isArray(about.sections)) {
-    about.sections.forEach(section => {
+    about.sections.forEach((section, index) => {
       const block = document.createElement('div');
-      block.className = 'about-subsection';
+      block.className = `about-subsection ${
+        index % 2 === 0 ? 'left' : 'right'
+      } fade-in`;
 
       const img = document.createElement('img');
       img.src = section.image;
@@ -33,16 +35,25 @@ function setAbout(about) {
       img.className = 'about-sub-img';
 
       const textContainer = document.createElement('div');
+      textContainer.className = 'about-text';
+
       const h2 = document.createElement('h2');
       h2.textContent = section.title;
+
       const p = document.createElement('p');
       p.textContent = section.text;
 
       textContainer.appendChild(h2);
       textContainer.appendChild(p);
 
-      block.appendChild(img);
-      block.appendChild(textContainer);
+      if (index % 2 === 0) {
+        block.appendChild(img);
+        block.appendChild(textContainer);
+      } else {
+        block.appendChild(textContainer);
+        block.appendChild(img);
+      }
+
       container.appendChild(block);
     });
   }
@@ -89,54 +100,58 @@ function setGallery(gallery) {
 function setFeedback(feedbacks) {
   const container = document.getElementById('feedback-container');
 
-  if (Array.isArray(feedbacks)) {
-    feedbacks.forEach((fb, index) => {
-      const div = document.createElement('div');
-      div.className = 'feedback-item';
+  if (!Array.isArray(feedbacks)) return;
 
-      const carousel = document.createElement('div');
-      carousel.className = 'feedback-carousel';
-      carousel.id = `carousel-${index}`;
+  feedbacks.forEach((fb, index) => {
+    const div = document.createElement('div');
+    div.className = 'feedback-item fade-in';
+    div.id = `feedback-${index}`;
 
-      fb.photos.forEach((photoUrl, i) => {
-        const img = document.createElement('img');
-        img.src = photoUrl;
-        img.alt = `Photo ${i + 1} of ${fb.name}`;
-        img.className = 'carousel-img';
-        if (i !== 0) img.style.display = 'none';
-        carousel.appendChild(img);
-      });
+    const carousel = document.createElement('div');
+    carousel.className = 'feedback-carousel';
+    carousel.id = `carousel-${index}`;
 
-      const indicators = document.createElement('div');
-      indicators.className = 'carousel-indicators';
-
-      fb.photos.forEach((_, i) => {
-        const dot = document.createElement('span');
-        dot.className = 'dot';
-        if (i === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => showSlide(index, i));
-        indicators.appendChild(dot);
-      });
-
-      const quote = document.createElement('blockquote');
-      quote.textContent = `“${fb.text}”`;
-
-      const name = document.createElement('p');
-      name.innerHTML = `<strong>${fb.name}</strong>`;
-
-      div.appendChild(carousel);
-      div.appendChild(indicators);
-      div.appendChild(quote);
-      div.appendChild(name);
-      container.appendChild(div);
+    fb.photos.forEach((photoUrl, i) => {
+      const img = document.createElement('img');
+      img.src = photoUrl;
+      img.alt = `Photo ${i + 1} of ${fb.name}`;
+      img.className = 'carousel-img';
+      if (i !== 0) img.style.display = 'none';
+      carousel.appendChild(img);
     });
-  }
+
+    const indicators = document.createElement('div');
+    indicators.className = 'carousel-indicators';
+
+    fb.photos.forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.className = 'dot';
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => showSlide(index, i));
+      indicators.appendChild(dot);
+    });
+
+    const quote = document.createElement('blockquote');
+    quote.textContent = `“${fb.text}”`;
+
+    const name = document.createElement('p');
+    name.innerHTML = `<strong>${fb.name}</strong>`;
+
+    div.appendChild(carousel);
+    div.appendChild(indicators);
+    div.appendChild(quote);
+    div.appendChild(name);
+    container.appendChild(div);
+
+    setupAutoSlideObserver(index, fb.photos.length);
+  });
 }
+
+// Funções auxiliares para o carrossel
+const carouselsIntervals = {};
 
 function showSlide(carouselIndex, slideIndex) {
   const carousel = document.getElementById(`carousel-${carouselIndex}`);
-  if (!carousel) return;
-
   const images = carousel.querySelectorAll('.carousel-img');
   const dots = carousel.nextElementSibling.querySelectorAll('.dot');
 
@@ -147,7 +162,49 @@ function showSlide(carouselIndex, slideIndex) {
   dots.forEach((dot, i) => {
     dot.classList.toggle('active', i === slideIndex);
   });
+
+  // Store the index for the next step
+  carousel.dataset.currentIndex = slideIndex;
 }
+
+function setupAutoSlideObserver(index, totalSlides) {
+  const feedbackItem = document.getElementById(`feedback-${index}`);
+  const carousel = document.getElementById(`carousel-${index}`);
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      if (!carouselsIntervals[index]) {
+        carouselsIntervals[index] = setInterval(() => {
+          let current = parseInt(carousel.dataset.currentIndex || 0);
+          let next = (current + 1) % totalSlides;
+          showSlide(index, next);
+        }, 3000);
+      }
+    } else {
+      clearInterval(carouselsIntervals[index]);
+      delete carouselsIntervals[index];
+    }
+  }, { threshold: 0.6 });
+
+  observer.observe(feedbackItem);
+}
+
+function showSlide(carouselIndex, slideIndex) {
+  const carousel = document.getElementById(`carousel-${carouselIndex}`);
+  const images = carousel.querySelectorAll('.carousel-img');
+  const dots = carousel.nextElementSibling.querySelectorAll('.dot');
+
+  images.forEach((img, i) => {
+    img.style.display = i === slideIndex ? 'block' : 'none';
+  });
+
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === slideIndex);
+  });
+
+  // Corrige o índice atual mesmo ao mudar manualmente
+  carousel.dataset.currentIndex = slideIndex;
+}
+
 
 // Preenche contato
 function setContact(contact) {
@@ -204,20 +261,18 @@ window.addEventListener('DOMContentLoaded', () => {
   const toggleBtn = document.querySelector('.menu-toggle');
   const menu = document.querySelector('.menu');
 
-  if (toggleBtn && menu) {
-    toggleBtn.addEventListener('click', () => {
-      if (menu.classList.contains('active')) {
-        menu.classList.remove('active');
-        menu.style.display = 'none';
-      } else {
-        menu.classList.add('active');
-        menu.style.display = 'flex';
-        menu.style.flexDirection = 'column';
-      }
-      toggleBtn.setAttribute(
-        'aria-expanded',
-        menu.classList.contains('active')
-      );
-    });
-  }
+  toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    toggleBtn.classList.toggle('open');
+  });
+});
+
+// Fade-in effect on About and Feedback sections
+window.addEventListener('scroll', () => {
+  document.querySelectorAll('.fade-in').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add('visible');
+    }
+  });
 });
