@@ -149,6 +149,7 @@ function setFeedback(feedbacks) {
 
 // Funções auxiliares para o carrossel
 const carouselsIntervals = {};
+const carrouselDelay = 8000;
 
 function showSlide(carouselIndex, slideIndex) {
   const carousel = document.getElementById(`carousel-${carouselIndex}`);
@@ -177,7 +178,7 @@ function setupAutoSlideObserver(index, totalSlides) {
           let current = parseInt(carousel.dataset.currentIndex || 0);
           let next = (current + 1) % totalSlides;
           showSlide(index, next);
-        }, 3000);
+        }, carrouselDelay);
       }
     } else {
       clearInterval(carouselsIntervals[index]);
@@ -201,8 +202,24 @@ function showSlide(carouselIndex, slideIndex) {
     dot.classList.toggle('active', i === slideIndex);
   });
 
-  // Corrige o índice atual mesmo ao mudar manualmente
+  // Atualiza o índice atual
   carousel.dataset.currentIndex = slideIndex;
+
+  // Reset temporizador
+  resetCarouselTimer(carouselIndex, images.length);
+}
+
+function resetCarouselTimer(index, totalSlides) {
+  const carousel = document.getElementById(`carousel-${index}`);
+  if (!carousel) return;
+
+  clearInterval(carouselsIntervals[index]);
+
+  carouselsIntervals[index] = setInterval(() => {
+    let current = parseInt(carousel.dataset.currentIndex || 0);
+    let next = (current + 1) % totalSlides;
+    showSlide(index, next);
+  }, carrouselDelay);
 }
 
 
