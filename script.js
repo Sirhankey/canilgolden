@@ -132,7 +132,7 @@ function setFeedback(feedbacks) {
     });
 
     const quote = document.createElement('blockquote');
-    quote.textContent = `“${fb.text}”`;
+    quote.textContent = `${fb.text}`;
 
     const name = document.createElement('p');
     name.innerHTML = `<strong>${fb.name}</strong>`;

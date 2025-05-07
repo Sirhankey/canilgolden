@@ -279,7 +279,15 @@
   }
   
   .feedback-item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
     margin-bottom: 4rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease;
   }
   
   .feedback-carousel {
